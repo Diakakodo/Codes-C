@@ -1,0 +1,112 @@
+1)
+
+Dichotomie [0 50000]
+Entrée : Nombre inconnu N entre 0 et 50000  Sortie:Nombre connu N entre 0 et 50000
+
+Faire:
+	
+	Entier min<-0,max<-50000,Test<-max
+	Afficher Test
+	TANT QUE(Test different de N)
+		
+		SI Test<N
+			max<-Test
+			Afficher Test
+			Test<-(max+min)/2
+			
+		SI Test>N
+			min<-Test
+			Afficher Test
+			Test<-(max+min)/2
+			
+			
+		SI Test=N
+			Afficher
+			Retourner Test
+			
+	FIN TANT QUE
+FIN	
+
+Complexité : log(N)
+
+2)
+
+4, 1, 2, 5, 6, 3
+
+3 1 2 5 6 4
+3 1 2 4 6 5
+2 1 3 4 6 5
+1 2 3 4 6 5
+1 2 3 4 5 6
+
+l'algorithme de tri rapide consiste à placer un maqueur au début d'un tableau non trié.
+On place un indexe au bout du tableau, qui se déplace jusqu'au marqueur.
+Si on trouve un element plus petit que le marqueur, on les echange et l'indexe' continue de se deplacer vers le marqueur
+Une fois fait, un element est correctement placé. Le tableau est séparé en deux sous tableaux.
+On effectue l'algorithme sur les deux sous tableaux.
+
+recursivité simple
+
+il faudra prendre en argument un tableau, l'indice de debut (marqueur) l'indice de fin (indexe)
+Un tableau trié est en sortie
+
+Tri :
+	Entrée Tableau,i,j
+	SI(i<j)
+		p<-Partitionnement(tab,i,j)
+		Tris(Tab,i,p-1)
+		Tris(Tab,p+1,j)
+	Fin SI	
+	
+Le pivot est l'element le plus a gauche du tableau
+Au début du partitionnement, les indices se placent au début, et à la fin du tableau
+L'algoritme de partitionnement prend donc en entré, un tableau, un indice i et un indice j
+
+Le partitionnement s'arrête quand l'indice du marqueur a rejoint l'autre indice : if(indiceMarqueur==max) return Tab;
+
+Il faut forcément que l'indice de gauche soit plus petit que l'indice de droite
+
+Il faut que l'indice de droite soit plus grand que l'indice de gauche
+
+//Si T[G]=T[D] on echange T[G] et T[D-1] et on echange les indices indiceMarqueur et max
+
+Lorsque le partitionnement est terminé, on obtient un tableau trié
+
+
+Partitionnement :
+
+	Entrée Tableau, indiceMarqueur, max
+	Faire :
+	
+		Tant que (max different indiceMarqueur)
+		
+			SI Tab[max]<=Tab[indiceMarqueur]
+				Echanger Tab[max] et Tab[indiceMarqueur]				
+			FIN SI			
+			
+			SI max < indiceMarqueur
+				max<-max+1
+			FIN SI	
+			
+			SI max > indiceMarqueur
+				max<-max-1
+			FIN SI	
+			
+			SI max=indiceMarqueur
+				Retourner max
+			FIN SI	
+		
+		FIN TANT QUE
+		
+diviser : partitionnement
+régner : résoudre le probleme dans chacun des cas
+combiner : reunion des éléments la toute fin
+
+tris rapide : Nlog(N)
+dichotomie : log(N)
+
+La dichotomie cherche un élément dans un tableau de maniere recursive en reduisant de moiter les bornes petit a petit
+en fonction de si l'element cherche est en dessous ou au dessus de la position actuelle.
+
+Le tris rapide sépare le probleme en deux parties en placant les elements plus petits qu'un pivot, à sa gauche, et les elements plus grands, à droite
+puis trie les deux parties en réitérant le même opération à chaque fois

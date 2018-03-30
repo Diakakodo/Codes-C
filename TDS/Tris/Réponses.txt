@@ -1,0 +1,143 @@
+1) Tris à Bulles
+
+Exercice 1 :
+
+4, 2, 5, 3, 1
+
+2, 4, 5, 3, 1
+2, 4, 3, 5, 1
+2, 4, 3, 1, 5
+2, 3, 4, 1, 5
+2, 3, 1, 4, 5
+2, 1, 3, 4, 5
+1, 2, 3, 4, 5
+
+
+2) Il faut faire N-1 parcours
+
+3) On compare N-1 éléments
+
+4) On regarde les cartes de gauche à droite. Si la carte suivant la carte actuelle est plus petite, on les echanges. 
+On procède de même jusqu'a la fin de la ligne de cartes, puis on recommence jusqu'au tris complet.
+
+Exercice 2 :
+
+1) POUR 2) POUR
+
+3) Tris à Bulles
+
+Entrée : tableau de cartes  Sortie : tableau de cartes trié
+
+Faire :
+
+	POUR i de 1 à N-1
+		
+		POUR j de 1 à N-1
+		
+			SI tab[j]>tab[j+1]
+			
+				ECHANGER tab[j] et tab[j+1]
+			
+			FIN SI
+			
+		FIN POUR
+		
+	FIN POUR	
+	
+	Retourner Tab
+	
+2 4 3 6 1 5
+
+2 3 4 6 1 5
+2 3 4 1 6 5
+2 3 4 1 5 6
+2 3 1 4 5 6
+2 1 3 4 5 6
+1 2 3 4 5 6
+
+Exercice 3 :
+
+Complexité O(N²)
+Complexité O(N²/2)
+
+
+2) Tris selectif
+
+Exercice 1:
+
+4 2 5 3 1
+
+1 2 5 3 4
+1 2 5 3 4 
+1 2 3 5 4
+1 2 3 4 5
+
+1 parcours et N opérations
+
+On place un marqueur sur le premier element, on cherche le plus petit element de la serie, et on echange l'element du marqueur avec le plus
+petit element trouvé.
+On continue jusqu'a ce que l'element se retrouve à la fin de la serie.
+
+La boucle principle et la boucle de parcours, sont une boucle POUR
+
+Tris selectif
+
+Entrée : tableau de cartes  Sortie : tableau de cartes trié
+
+Faire :
+	Entier min
+	POUR i de 1 à N
+		min<-tab[i]
+		POUR j de i+1 à N
+			
+			SI tab[j]<min
+			
+				min<-j
+			
+			FIN SI
+			
+		FIN POUR
+		ECHANGER Tab[min] et Tab[i]
+		
+	FIN POUR	
+	
+	Retourner Tab
+	
+(2N+4)*N=2N²+4N : O(N²) Complexité quadratique
+
+O(N²) comparaisons
+O(N²) décallages
+
+3) Tris insertion
+
+4, 2, 5, 3, 1
+2 4 5 3 1
+2 3 4 5 1
+1 2 3 4 5
+
+1 parcours
+à chaque parcours on fait N-1 comparaisons
+
+On a un marqueur, et tant qu'un element du tableau est plus grand que lui, on le déplace vers le gauche, puis quand un
+element plus petit est trouvé, on insere le marqueur
+
+2 boucles POUR
+
+tris insertion
+
+Faire:
+	POUR i de 1 jusqu'a N
+	
+		marqueur<-Tab[i]						
+		POUR j de i jusqu'a 0 et Tab[j-1]>marqueur			
+			Tab[j] <- Tab[j-1]
+		FIN POUR
+		Tab[j] <- marqueur	
+		
+	FIN POUR	
+	
+Complexité O(N²)
+
+Le tri insertion est le meilleur
+
+LE tri a bulles est efficace si le tableau est presque trié

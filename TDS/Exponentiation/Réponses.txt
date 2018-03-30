@@ -1,0 +1,48 @@
+1) LA méthode droite-gauche est impossible à réaliser
+6) Complexité linéaire pour les deux, mais l'algorithme gauche droite est beaucoup plus lourd
+7) L'agorithme droite gauche est mieux
+
+1) g^(ed*ep)<4 Milliard | Pas de restrictions sur n | ep*ed<80
+2) n<=4 Milliard
+
+1) Exponentiation g:
+
+Entrées : g(nombre) e (exposant)  Sorties : g^e
+
+Faire :
+	Declaration resultat
+	resultat<-1
+	
+	Pour i de 1 jusqu'a e
+		resultat<-resultat*g
+	renvoyer resultat
+
+2) Complexité linéaire : 4+3e | Le modulo doit etre effectué après le calcul de puissance
+3) Afin d'optimiser le code il faudrait placer la modulo juste avant de renvoyer le résultat
+6) Il fait en fait mettre le modulo dans la boucle, pour qu'il s'éffectue à chaque calcul
+
+1) g^((a)^b) g^((2)^2) g^(((2)^2)^2) g^((((2)^2)^2)^2)
+		
+1) 
+ExpoPuiss2
+Entrées : Entier g, Entier e 
+Faire :	
+	si e=1
+		retourner g		
+	
+	retourner ExpoPuiss2(g*g,e/2)	
+2) Complexité linéaire 2e+3
+
+1) Taille 5
+2)
+1 : 4
+2 : 4²=4*4
+3 : 4⁴=4²*4²
+4 : 4⁸=4⁴*4⁴
+5 : 4¹⁶=4⁸*4⁸
+
+3) 22=10110
+
+4) 4^22 Mod 7 = 4
+		
+		

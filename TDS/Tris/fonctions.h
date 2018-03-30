@@ -1,0 +1,11 @@
+void trisbulle(int* Tab,int N);
+void triselection(int* Tab,int N);
+void trisinsertion(int* Tab,int N);
+void trisrapide(int* Tab,int i,int j);
+int partitionnement(int* Tab,int premier,int dernier);
+void Echange(int* Tab,int i,int j);
+void InitTabUniforme(int* Tab,int N);
+void InitTabPresqueTrie(int* Tab,int N,int P);
+void InitTabRepetition(int * Tab,int N,int R);
+void shuffle(int* Tab,int N);
+void affiche(int *Tab,int N);

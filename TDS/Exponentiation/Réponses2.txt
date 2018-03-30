@@ -1,0 +1,21 @@
+38 en base 2 donne 011001
+On trouve avec l'exemple : g²*g⁴*g³²=g³⁸
+la décomposition de 22 donne 01101
+l'algorithme donne 4
+
+Exponentiation
+
+Entrées : Entier g, Tab décomposition de e, n	Sorties : g puissance e
+Les opérations se feront %n
+Entier res
+Faire : 
+	res<-1
+	Pour i de 1 jusqu'a taille de Tab 
+		
+		si Tab[i]=1
+		
+			res=res*g
+				
+		g<-g^2
+	
+	Fin Pour
