@@ -23,7 +23,9 @@
   <Project Name="TPRecursif" Path="TPRecursif/TPRecursif.project" Active="No"/>
   <Project Name="Exponentiation" Path="Exponentiation/Exponentiation.project" Active="No"/>
   <Project Name="Battle" Path="Battle/Battle.project" Active="No"/>
-  <Project Name="Tris" Path="Tris/Tris.project" Active="Yes"/>
+  <Project Name="Tris" Path="Tris/Tris.project" Active="No"/>
+  <Project Name="Tri_image" Path="Tri_image/Tri_image.project" Active="No"/>
+  <Project Name="Tris_bars" Path="Tris_bars/Tris_bars.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -54,6 +56,8 @@
       <Project Name="Exponentiation" ConfigName="Debug"/>
       <Project Name="Battle" ConfigName="Debug"/>
       <Project Name="Tris" ConfigName="Debug"/>
+      <Project Name="Tri_image" ConfigName="Debug"/>
+      <Project Name="Tris_bars" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -84,6 +88,8 @@
       <Project Name="Exponentiation" ConfigName="Release"/>
       <Project Name="Battle" ConfigName="Release"/>
       <Project Name="Tris" ConfigName="Release"/>
+      <Project Name="Tri_image" ConfigName="Release"/>
+      <Project Name="Tris_bars" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

@@ -1,0 +1,11 @@
+ORegans 1.5 1.5
+Wilson 0.1 1.6
+CapHorn 0 2
+Warner 0.8 1.8
+Donjon 1.2 1.5
+Bodega 1.2 1.4
+Charivari 1.6 1.7
+Zenith 0.8 1.4
+Duplex 1.4 1.2
+DynamicBar 6 0.8
+RondPoint 0.6 1.4
