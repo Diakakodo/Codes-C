@@ -26,6 +26,7 @@
   <Project Name="Tris" Path="Tris/Tris.project" Active="No"/>
   <Project Name="Tri_image" Path="Tri_image/Tri_image.project" Active="No"/>
   <Project Name="Tris_bars" Path="Tris_bars/Tris_bars.project" Active="Yes"/>
+  <Project Name="Douglas_Manger" Path="Douglas_Manger/Douglas_Manger.project"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -58,6 +59,7 @@
       <Project Name="Tris" ConfigName="Debug"/>
       <Project Name="Tri_image" ConfigName="Debug"/>
       <Project Name="Tris_bars" ConfigName="Debug"/>
+      <Project Name="Douglas_Manger" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -90,6 +92,7 @@
       <Project Name="Tris" ConfigName="Release"/>
       <Project Name="Tri_image" ConfigName="Release"/>
       <Project Name="Tris_bars" ConfigName="Release"/>
+      <Project Name="Douglas_Manger" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
