@@ -99,4 +99,6 @@
     <File Name="main.c"/>
     <File Name="path2.txt"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

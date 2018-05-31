@@ -97,4 +97,6 @@
     <File Name="recursif.h"/>
     <File Name="recursif.c"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

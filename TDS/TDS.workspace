@@ -14,7 +14,7 @@
   <Project Name="TD8" Path="TD8/TD8.project" Active="No"/>
   <Project Name="TD9" Path="TD9/TD9.project" Active="No"/>
   <Project Name="TD10" Path="TD10/TD10.project" Active="No"/>
-  <Project Name="Tests" Path="Tests/Tests.project" Active="Yes"/>
+  <Project Name="Tests" Path="Tests/Tests.project" Active="No"/>
   <Project Name="Polynomes" Path="Polynomes/Polynomes.project" Active="No"/>
   <Project Name="Matrices" Path="Matrices/Matrices.project" Active="No"/>
   <Project Name="Recursivite" Path="Recursivite/Recursivite.project" Active="No"/>
@@ -27,7 +27,8 @@
   <Project Name="Tri_image" Path="Tri_image/Tri_image.project" Active="No"/>
   <Project Name="Tris_bars" Path="Tris_bars/Tris_bars.project" Active="No"/>
   <Project Name="Douglas_Manger" Path="Douglas_Manger/Douglas_Manger.project" Active="No"/>
-  <Project Name="test_video" Path="test_video/test_video.project" Active="No"/>
+  <Project Name="Guitar" Path="Guitar/Guitar.project" Active="Yes"/>
+  <Project Name="Socket" Path="Socket/Socket.project"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -61,7 +62,8 @@
       <Project Name="Tri_image" ConfigName="Debug"/>
       <Project Name="Tris_bars" ConfigName="Debug"/>
       <Project Name="Douglas_Manger" ConfigName="Debug"/>
-      <Project Name="test_video" ConfigName="Debug"/>
+      <Project Name="Guitar" ConfigName="Debug"/>
+      <Project Name="Socket" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -95,7 +97,8 @@
       <Project Name="Tri_image" ConfigName="Release"/>
       <Project Name="Tris_bars" ConfigName="Release"/>
       <Project Name="Douglas_Manger" ConfigName="Release"/>
-      <Project Name="test_video" ConfigName="Release"/>
+      <Project Name="Guitar" ConfigName="Release"/>
+      <Project Name="Socket" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

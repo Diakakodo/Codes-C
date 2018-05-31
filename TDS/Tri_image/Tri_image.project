@@ -96,4 +96,6 @@
     <File Name="lib_image.c"/>
     <File Name="lib_image.h"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

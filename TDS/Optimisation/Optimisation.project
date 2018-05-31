@@ -98,4 +98,6 @@
     <File Name="Exercice 2.txt"/>
     <File Name="TropDeWarning.c"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>
