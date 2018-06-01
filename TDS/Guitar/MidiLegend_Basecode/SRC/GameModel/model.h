@@ -69,7 +69,7 @@ typedef struct Model_s
 	char **args;
 	int connexion;
 	int win_lose;
-	int resultat;
+	int resultat;	
 } Model;
 
 Model * newModel(SheetMusic * sheet, float relSpeed);

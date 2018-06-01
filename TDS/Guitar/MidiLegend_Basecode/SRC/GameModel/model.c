@@ -105,27 +105,24 @@ void updateGameSheet(GameSheet *sheet, Timer *timer)
 }
 
 void checkStrum(Model *model){
-    // TODO : Gérer les actions du joueur et modifier l'état des notes
-	int j;
+    
+	int j, fret;
 	float time, noteTime;
 	
 	for(j = 0; j < model -> gameSheet->nbNotes[model->gameSheet->staffIdx] ; j++){
 	
 		time = model -> timer->currentTime;
-		noteTime = model -> gameSheet -> notes[model -> gameSheet->staffIdx][j].playingTime;
+		noteTime = model -> gameSheet -> notes[model -> gameSheet->staffIdx][j].playingTime;		
+		fret = model->keys->fretDown[model->gameSheet->notes[model->gameSheet->staffIdx][j].stringIdx];
 		
-		
-		if(time - noteTime > - 0.1 && time - noteTime < 0.1){
+		if((model->keys->strumDown == 1) && ( fret == 1) &&  model->gameSheet->notes[model->gameSheet->staffIdx][j].state != statePlayed){			
 			
-			if(model->keys->strumDown == 1 && model->keys->fretDown[model->gameSheet->notes[model->gameSheet->staffIdx][j].stringIdx] == 1 && model->gameSheet->notes[model->gameSheet->staffIdx][j].state != statePlayed){
+			if((time - noteTime > - 0.1) && (time - noteTime < 0.1)){
 							
-				model->gameSheet->notes[model->gameSheet->staffIdx][j].state = statePlayed;		
-				model->points += 10;				
-				
-				printf("Score : %f\n", model->points);					
-			}
-		}
-		
+				model->gameSheet->notes[model->gameSheet->staffIdx][j].state = statePlayed;					
+				model->points += 10;		
+			}			
+		}			
 	}	
 }
 
@@ -145,7 +142,7 @@ Model * newModel(SheetMusic * sheet, float relSpeed)
 	model->network = 0;
 	model->connexion = 0;
 	model->win_lose = -1;
-	model->resultat = 0;
+	model->resultat = 0;	
 	
 	model->args = (char**) calloc(4, sizeof(char*));
 	for( i = 0; i < 4; i++){

@@ -121,10 +121,8 @@ void updateGameDisplay(GameDisplay *gameDisp, MainWindow *mainWindow, Model *mod
 			
 			x = metrics->score_adv[i].x;
 			y = metrics->score_adv[i].y;
-			renderTexture(textures->score[score_adv[i]], renderer, x, y);
-		
-		} 
-	
+			renderTexture(textures->score[score_adv[i]], renderer, x, y);		
+		} 	
 	}
 	
 	for(i = 0; i < nbStrings; i++){
@@ -168,16 +166,17 @@ void updateGameDisplay(GameDisplay *gameDisp, MainWindow *mainWindow, Model *mod
 		curNote = &notes[i];
 		stringIdx = curNote->stringIdx;
 		
-		if(curNote->state != stateAlive){
+		if(curNote->state == statePlayed){
 			
 			curNote->visible = 0;
-		}	
+		}		
 		if(nbStrings > stringIdx && curNote->visible == 1 ){			
 			
 			x = metrics->gameArea.x + espace*(1 + stringIdx) - metrics->strum[stringIdx].w/2 + metrics->gameArea.w;
 			y = metrics->gameArea.y + curNote->relPos * metrics->gameArea.h;
 			renderTexture(textures->notes[stringIdx], renderer, x, y);			
-		}	
+		}
+		
 	}			
     //******************************************************************************************************************
     // Mise à jour de l'affichage

@@ -44,11 +44,11 @@ int main(int argc, char** argv){
 	
     FILE  *midiFile = NULL;
     int nbStrings;
-    int pianoMode = 1;
+    int pianoMode;
     int staffIdx;
 	int i;
     float relSpeed;
-
+	
     //******************************************************************************************************************
     // Récupération des arguments du main
 
